@@ -1,4 +1,5 @@
 defmodule Portalcautivo.Repo.Migrations.CreateProjects do
+@foreign_key_type {:client_id, :captive_id, :id}
   use Ecto.Migration
 
   def change do

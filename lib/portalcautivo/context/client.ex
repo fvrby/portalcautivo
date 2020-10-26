@@ -1,5 +1,6 @@
 defmodule Portalcautivo.Context.Client do
   use Ecto.Schema
+  @foreign_key_type :id
   import Ecto.Changeset
 
   schema "clients" do

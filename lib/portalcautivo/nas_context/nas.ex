@@ -1,12 +1,13 @@
 defmodule Portalcautivo.Nas_context.Nas do
   use Ecto.Schema
+  @foreign_key_type :id
   import Ecto.Changeset
 
   schema "nas" do
     field :name, :string
     field :mac, :string
-    field :project_id, references(:project)
-
+    belongs_to :project_id, Portalcautivo.Project_context.Project 
+    
     timestamps()
   end
 

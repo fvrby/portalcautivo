@@ -1,5 +1,6 @@
 defmodule Portalcautivo.Captive_Context.Captive do
   use Ecto.Schema
+  @foreign_key_type :id
   import Ecto.Changeset
 
   schema "captives" do

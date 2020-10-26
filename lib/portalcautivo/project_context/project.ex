@@ -1,10 +1,11 @@
 defmodule Portalcautivo.Project_context.Project do
   use Ecto.Schema
+  @foreign_key_type :id
   import Ecto.Changeset
 
   schema "projects" do
-    field :captive_id, references(:captive)
-    field :client_id,  references(:client)
+    belongs_to :captive_id, Portalcautivo.Captive_Context.Captive
+    belongs_to :client_id, Portalcautivo.Context.Client
     field :name, :string
 
     timestamps()
