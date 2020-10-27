@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :portalcautivo, Portalcautivo.Repo,
-  username: "postgres",
-  password: "123",
+  username: "portalcautivo",
+  password: "portalcautivo20202",
   database: "portalcautivo_dev",
   hostname: "rds-portalcautivo.coo2snytbquk.us-east-1.rds.amazonaws.com",
   show_sensitive_data_on_connection_error: true,
