@@ -4,7 +4,7 @@ use Mix.Config
 config :portalcautivo, Portalcautivo.Repo,
   username: "portalcautivo",
   password: "portalcautivo2020",
-  database: "portalcautivo_dev",
+  database: "portalcautivodb",
   hostname: "rds-portalcautivo.coo2snytbquk.us-east-1.rds.amazonaws.com",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
