@@ -4,7 +4,7 @@ defmodule Portalcautivo.Components_context.Components do
   import Ecto.Changeset
 
   schema "components" do
-    belongs_to :id, Portalcautivo.Campaign_context.Campaign
+    
     field :meta, :string
     field :src, :string
     field :type, :string
