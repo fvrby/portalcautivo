@@ -5,7 +5,7 @@ config :portalcautivo, Portalcautivo.Repo,
   username: "postgres",
   password: "123",
   database: "portalcautivo_dev",
-  hostname: "localhost",
+  hostname: "rds-portalcautivo.coo2snytbquk.us-east-1.rds.amazonaws.com",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
