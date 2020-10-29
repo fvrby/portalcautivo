@@ -1,4 +1,5 @@
 defmodule Portalcautivo.Repo.Migrations.CreateComponents do
+@foreign_key_type :campaign_id
   use Ecto.Migration
 
   def change do

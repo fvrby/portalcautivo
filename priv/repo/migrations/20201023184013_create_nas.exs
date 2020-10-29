@@ -1,12 +1,12 @@
 defmodule Portalcautivo.Repo.Migrations.CreateNas do
-  @foreign_key_type :id
+  @foreign_key_type :project_id
   use Ecto.Migration
 
   def change do
     create table(:nas) do
       add :name, :string
       add :mac, :string
-      belongs_to :project_id, Portalcautivo.Project_context.Project 
+      add :project_id, :integer
 
       timestamps()
     end
