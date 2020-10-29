@@ -4,8 +4,8 @@ defmodule Portalcautivo.Project_context.Project do
   import Ecto.Changeset
 
   schema "projects" do
-    field :captive_id, Portalcautivo.Captive_Context.Captive
-    field :client_id, Portalcautivo.Context.Client
+    field :captive_id, :integer 
+    field :client_id, :integer 
     field :name, :string
 
     timestamps()
