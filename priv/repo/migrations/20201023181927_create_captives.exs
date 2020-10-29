@@ -7,7 +7,7 @@ defmodule Portalcautivo.Repo.Migrations.CreateCaptives do
       add :name, :string
       add :social_network, :boolean, default: false, null: false
       add :version, :integer
-      add :project_id, references(:project)
+      add :project_id, :integer
 
       timestamps()
     end
