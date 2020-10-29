@@ -1,5 +1,5 @@
 defmodule Portalcautivo.Repo.Migrations.CreateNascamp do
-@foreign_key_type {:id, campaign_id}
+@foreign_key_type :id
   use Ecto.Migration
 
   def change do
