@@ -4,8 +4,8 @@ defmodule Portalcautivo.Nascamp_context.Nascamp do
   import Ecto.Changeset
 
   schema "nascamp" do
-    field :campaign_id, :integer 
-
+    belongs_to :campaign_id, Portalcautivo.Campaign_context.Campaign
+    belongs_to :id, Portalcautivo.Nas_context.Nas
     timestamps()
   end
 

@@ -6,7 +6,7 @@ defmodule Portalcautivo.Nas_context.Nas do
   schema "nas" do
     field :name, :string
     field :mac, :string
-    field :project_id, :integer 
+    belongs_to :project_id, Portalcautivo.Project_context.Project
     
     timestamps()
   end
