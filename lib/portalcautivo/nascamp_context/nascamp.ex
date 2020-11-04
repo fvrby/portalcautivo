@@ -4,7 +4,7 @@ defmodule Portalcautivo.Nascamp_context.Nascamp do
   import Ecto.Changeset
 
   schema "nascamp" do
-    belongs_to :campaign_id, Portalcautivo.Campaign_context.Campaign
+    belongs_to :campaign, Portalcautivo.Campaign_context.Campaign
     timestamps()
   end
 
