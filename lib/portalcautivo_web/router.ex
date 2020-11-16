@@ -1,12 +1,12 @@
 defmodule PortalcautivoWeb.Router do
   use PortalcautivoWeb, :router
 
-  pipeline :browser do
-    plug :accepts, ["html"]
+  pipeline :api do
+    plug :accepts, ["json"]
     plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
+  # plug :fetch_flash                # no nos sirve
+  # plug :protect_from_forgery       # no nos sirve
+  # plug :put_secure_browser_headers # no nos sirve
   end
 
   pipeline :api do
@@ -19,10 +19,10 @@ defmodule PortalcautivoWeb.Router do
     get "/", PageController, :index
 
     resources "/clients", ClientController, except: [:new, :edit] do
-    get "/clients", ClientController, :show
-    post "/clients", ClientController, :create
-    #patch "/clients", ClientController, :update
-    #delete "/clients", ClientController, :delete
+      get "/clients", ClientController, :show
+      post "/clients", ClientController, :create
+      patch "/clients", ClientController, :update
+      delete "/clients", ClientController, :delete
     end
 
     resources "/captives", CaptiveController, except: [:new, :edit]
@@ -55,7 +55,7 @@ defmodule PortalcautivoWeb.Router do
     import Phoenix.LiveDashboard.Router
 
     scope "/" do
-      pipe_through :api
+      pipe_through [:fetch_session, :protect_from_forgery] # Cuidar esto
       live_dashboard "/dashboard", metrics: PortalcautivoWeb.Telemetry
     end
   end
