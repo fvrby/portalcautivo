@@ -18,8 +18,7 @@ defmodule PortalcautivoWeb.Router do
 
     get "/", PageController, :index
 
-    resources "/clients", ClientController 
-    # , except: []  do
+    resources "/clients", ClientController, except: [:new, :edit] # do
     #  get "/clients", ClientController, :show,
     #  post "/clients", ClientController, :create
     #  patch "/clients", ClientController, :update
