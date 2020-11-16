@@ -17,13 +17,26 @@ defmodule PortalcautivoWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    resources "/clients", ClientController, except: [:new, :edit]
+
+    resources "/clients", ClientController, except: [:new, :edit] do
+    get "/clients", ClientController, :show
+    post "/clients", ClientController, :create
+    patch "/clients", ClientController, :update
+    delete "/clients", ClientController, :delete
+    end
+
     resources "/captives", CaptiveController, except: [:new, :edit]
+
     resources "/projects", ProjectController, except: [:new, :edit]
+
     resources "/nas", NasController, except: [:new, :edit]
+
     resources "/nascamp", NascampController, except: [:new, :edit]
+
     resources "/campaign", CampaignController, except: [:new, :edit]
+
     resources "/components", ComponentsController, except: [:new, :edit]
+
   end
 
   # Other scopes may use custom stacks.
