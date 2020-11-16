@@ -14,7 +14,7 @@ defmodule PortalcautivoWeb.Router do
   end
 
   scope "/", PortalcautivoWeb do
-    pipe_through :browser
+    pipe_through :api
 
     get "/", PageController, :index
 
@@ -55,7 +55,7 @@ defmodule PortalcautivoWeb.Router do
     import Phoenix.LiveDashboard.Router
 
     scope "/" do
-      pipe_through :browser
+      pipe_through :api
       live_dashboard "/dashboard", metrics: PortalcautivoWeb.Telemetry
     end
   end
