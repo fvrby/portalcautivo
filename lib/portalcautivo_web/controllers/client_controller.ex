@@ -11,7 +11,7 @@ defmodule PortalcautivoWeb.ClientController do
     render(conn, "index.json", clients: clients)
   end
 
-  def create(conn, %{"data" => client_params}) do
+  def create(conn, %{client_params}) do # "client" => 
     with {:ok, %Client{} = client} <- Context.create_client(client_params) do
       conn
       |> put_status(:created)
