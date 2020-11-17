@@ -8,6 +8,7 @@ defmodule Portalcautivo.Components_context.Components do
     field :meta, :string
     field :src, :string
     field :type, :string
+    belongs_to :campaign, Portalcautivo.Campaign_context.Campaign
     timestamps()
   end
 
