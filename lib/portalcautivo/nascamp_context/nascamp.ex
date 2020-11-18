@@ -12,7 +12,7 @@ defmodule Portalcautivo.Nascamp_context.Nascamp do
   @doc false
   def changeset(nascamp, attrs) do
     nascamp
-    |> cast(attrs, [:campaign_id])
-    |> validate_required([:campaign_id])
+    |> cast(attrs, [:nas_id,:campaign_id])
+    |> validate_required([:nas_id, :campaign_id])
   end
 end
