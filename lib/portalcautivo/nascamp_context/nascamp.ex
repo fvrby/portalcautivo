@@ -5,6 +5,7 @@ defmodule Portalcautivo.Nascamp_context.Nascamp do
 
   schema "nascamp" do
     belongs_to :campaign, Portalcautivo.Campaign_context.Campaign
+    belongs_to :nas, Portalcautivo.Nas_context.Nas
     timestamps()
   end
 
