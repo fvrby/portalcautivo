@@ -12,7 +12,7 @@ defmodule PortalcautivoWeb.NascampView do
 
   def render("nascamp.json", %{nascamp: nascamp}) do
     %{id: nascamp.id,
-      campaign_id: nascamp.campaign_id
+      campaign_id: nascamp.campaign_id,
       nas_id: nascamp.nas_id}
   end
 end
